@@ -34,7 +34,10 @@ if __name__ == '__main__':
     
     files = []
     command = []
-    
+
+    if '-clear' in args:
+        clear = True
+
     if '-c' in args:
         cpos = args.index('-c')
         files = args[:cpos]
@@ -71,6 +74,8 @@ if __name__ == '__main__':
                 t = os.stat(f).st_mtime
                 if t != mtimes[i]:
                     mtimes[i] = t
+                    if clear:
+                         os.system('clear')
                     os.system(command)
                 
             except OSError as e:
