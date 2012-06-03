@@ -35,7 +35,7 @@ if __name__ == '__main__':
     files = []
     command = []
 
-    if '-clear' in args:
+    if '--clear' in args:
         clear = True
     else:    
         clear = False            
