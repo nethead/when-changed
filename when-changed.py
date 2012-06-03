@@ -37,6 +37,8 @@ if __name__ == '__main__':
 
     if '-clear' in args:
         clear = True
+    else:    
+        clear = False            
 
     if '-c' in args:
         cpos = args.index('-c')
